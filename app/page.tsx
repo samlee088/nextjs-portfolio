@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import ContactInformation from "../components/ContactInformation";
 import ProjectCarousels from "../components/ProjectCarousels";
 
@@ -10,6 +11,9 @@ export default function Home() {
       </div>
       <div className="mt-20 mb-40">
         <ContactInformation />
+      </div>
+      <div className="mt-20">
+        <Footer />
       </div>
     </main>
   );

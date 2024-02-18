@@ -26,7 +26,6 @@ const formSchema = z.object({
 });
 
 function ContactInformation() {
-
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -36,6 +35,10 @@ function ContactInformation() {
       message: "",
     },
   });
+
+  const {
+    formState: { errors },
+  } = form;
 
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
@@ -68,6 +71,9 @@ function ContactInformation() {
                 <FormControl>
                   <Input placeholder="Name..." {...field} />
                 </FormControl>
+                {errors.name && (
+                  <p className="text-red-500">{errors.name.message}</p>
+                )}
                 <FormDescription>
                   Hello, nice to meet you! What is your name? 🙂
                 </FormDescription>
@@ -82,6 +88,9 @@ function ContactInformation() {
                 <FormControl>
                   <Input placeholder="Email..." {...field} />
                 </FormControl>
+                {errors.email && (
+                  <p className="text-red-500">{errors.email.message}</p>
+                )}
                 <FormDescription>Your email address</FormDescription>
               </FormItem>
             )}
@@ -94,6 +103,9 @@ function ContactInformation() {
                 <FormControl>
                   <Textarea placeholder="Type your message here." {...field} />
                 </FormControl>
+                {errors.message && (
+                  <p className="text-red-500">{errors.message.message}</p>
+                )}
                 <FormDescription>Please leave me a message</FormDescription>
               </FormItem>
             )}

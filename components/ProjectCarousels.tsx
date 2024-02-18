@@ -1,13 +1,7 @@
 "use client";
 
-// import useEmblaCarousel from "embla-carousel-react";
-// import Autoplay from "embla-carousel-autoplay";
-// import { Movie } from "@/typings";
-// import Image from "next/image";
-// import getImagePath from "@/lib/getImagePath";
-
 import * as React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+
 import Image from "next/image";
 import {
   Carousel,
