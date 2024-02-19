@@ -2,10 +2,14 @@ import Footer from "../components/Footer";
 import ContactInformation from "../components/ContactInformation";
 import ProjectCarousels from "../components/ProjectCarousels";
 import ResumeSkills from "../components/ResumeSkills";
+import Introduction from "../components/Introduction";
 
 export default function Home() {
   return (
     <main>
+      <div className="mt-20">
+        <Introduction />
+      </div>
       <div className="mt-40 mb-100">
         <ResumeSkills />
       </div>
