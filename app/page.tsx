@@ -32,8 +32,11 @@ export default function Home() {
       <section id="contact" className=" snap-center">
         <ContactInformation />
       </section>
-      {/* <section className="snap-center">
-      </section> */}
+
+      {/* Footer Section */}
+      <footer className="sticky bottom-5 w-full cursor-pointer">
+        <Footer />
+      </footer>
     </main>
   );
 }

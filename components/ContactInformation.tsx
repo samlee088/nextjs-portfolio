@@ -121,7 +121,6 @@ function ContactInformation() {
           <Button type="submit">Submit</Button>
         </form>
       </Form>
-      <Footer />
     </motion.div>
   );
 }
