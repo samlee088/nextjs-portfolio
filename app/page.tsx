@@ -24,7 +24,7 @@ export default function Home() {
       </section>
 
       {/* Project Carousel */}
-      <section id="projects" className=" snap-start">
+      <section id="projects" className=" snap-center">
         <ProjectCarousels />
       </section>
 
