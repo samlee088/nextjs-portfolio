@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <div className=" fixed w-full z-20 top-0  flex items-center justify-between p-5 bg-gradient-to-r from-purple-700 via-yellow-700 to-yellow-300">
+    <div className=" fixed w-full z-20 top-0  flex items-center justify-between p-5 bg-gradient-to-r from-purple-700 via-yellow-700 to-[#ffc700]">
       <motion.div
         initial={{
           x: -500,

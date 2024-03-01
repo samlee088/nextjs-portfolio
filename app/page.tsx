@@ -7,7 +7,7 @@ import Menu from "@/components/Menu";
 
 export default function Home() {
   return (
-    <main className="h-screen snap-y snap-mandatory overflow-scroll z-0">
+    <main className="h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar scrollbar-track-[#32006e] scrollbar-thumb-[#ffc700]">
       {/* Introduction Menu */}
       <section id="menu" className=" snap-center">
         <Menu />
