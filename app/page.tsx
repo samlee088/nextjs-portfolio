@@ -19,17 +19,17 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className=" snap-start">
+      <section id="skills" className=" snap-center">
         <ResumeSkills />
       </section>
 
       {/* Project Carousel */}
-      <section id="projects" className=" snap-center">
+      <section id="projects" className=" snap-start">
         <ProjectCarousels />
       </section>
 
       {/* Contact Information */}
-      <section id="contact" className=" snap-start">
+      <section id="contact" className=" snap-center">
         <ContactInformation />
       </section>
       {/* <section className="snap-center">

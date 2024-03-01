@@ -74,47 +74,54 @@ function CarouselBanner() {
 
   return (
     <>
-      <div className="overflow-hidden  relative cursor-pointer">
-        <Carousel
-          plugins={[plugin.current]}
-          onMouseLeave={plugin.current.reset}
-        >
-          <CarouselContent>
-            {picturesArray.map((project, index) => (
-              <CarouselItem key={index}>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    key={project.title}
-                    className="flex-full min-w-0 relative"
-                  >
-                    <Image
-                      key={project.title}
-                      src={project.picture}
-                      alt=""
-                      width={1920}
-                      height={1080}
-                    />
+      <div className=" h-screen flex flex-col overflow-hidden  relative cursor-pointer text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl">
+          Projects
+        </h3>
 
-                    <div className="hidden lg:inline absolute mt-0 top-0 pt-40 xl:pt-52 left-0 lg:mt-40 bg-transparent z-20 h-full w-full bg-gradient-to-r from-gray-900/90 via-transparent to-transparent p-10 space-y-5 text-white ">
-                      <h2 className="text-5xl font-bold max-w-xl z-50">
-                        {project.title}
-                      </h2>
-                      <p className="max-w-xl line-clamp-3">
-                        {project.description}
-                      </p>
+        <div className="relative w-full z-20">
+          <Carousel
+            plugins={[plugin.current]}
+            onMouseLeave={plugin.current.reset}
+          >
+            <CarouselContent>
+              {picturesArray.map((project, index) => (
+                <CarouselItem key={index}>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      key={project.title}
+                      className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen text-center"
+                    >
+                      <Image
+                        key={project.title}
+                        src={project.picture}
+                        alt=""
+                        width={1080}
+                        height={1080}
+                      />
+
+                      <div className="space-y-10 px-0 md:px-10 max-w-6xl ">
+                        <h2 className="text-5xl font-bold max-w-xl z-50">
+                          {project.title}
+                        </h2>
+                        <p className="max-w-xl line-clamp-3">
+                          {project.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+                  </a>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+        <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
       </div>
     </>
   );
