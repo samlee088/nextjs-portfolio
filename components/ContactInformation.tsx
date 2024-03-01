@@ -18,6 +18,7 @@ import * as z from "zod";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "./ui/button";
+import Footer from "./Footer";
 
 const formSchema = z.object({
   name: z.string().min(1).max(50),
@@ -44,14 +45,14 @@ function ContactInformation() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+
     send("service_bdiqeoa", "template_yg700uv", values, "-AdyUNdziDTS10xoC")
       .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
+        // console.log("SUCCESS!", response.status, response.text);
         toast.success("Email has been sent! ");
       })
       .catch((err) => {
-        console.log("FAILED...", err);
+        // console.log("FAILED...", err);
         toast.error("Error: Email was not sent");
       });
 
@@ -59,8 +60,10 @@ function ContactInformation() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="my-16 text-6xl">Contact</h1>
+    <div className="flex flex-col items-center justify-center h-screen relative">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl">
+        Contact
+      </h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
@@ -113,6 +116,7 @@ function ContactInformation() {
           <Button type="submit">Submit</Button>
         </form>
       </Form>
+      <Footer />
     </div>
   );
 }

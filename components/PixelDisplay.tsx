@@ -6,7 +6,7 @@ type Props = {
 
 function PixelDisplay({ displayText }: Props) {
   return (
-    <div className="text-center mt-10">
+    <div className="text-center">
       <h1 className="gradient-text-micro-5-regular gradient-underline text-9xl ">
         <span>{displayText}</span>
       </h1>

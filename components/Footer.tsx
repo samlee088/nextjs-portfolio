@@ -3,12 +3,12 @@
 import React from "react";
 export default function Footer() {
   return (
-    <footer className="text-center" style={{ backgroundColor: "#f1f1f1" }}>
+    <footer className="text-center w-screen mt-10 bottom-0">
       <div className="container pt-4 flex flex-row items-center justify-center">
         <section className="mb-4 flex flex-row ">
           {/* <!-- Google --> */}
           <a
-            className="btn text-white btn-floating m-1"
+            className="btn text-white btn-floating m-10"
             style={{ backgroundColor: "#dd4b39" }}
             href="mailto:leesamuel42@gmail.com"
             role="button"
@@ -21,7 +21,7 @@ export default function Footer() {
 
           {/* <!-- Linkedin --> */}
           <a
-            className="btn text-white btn-floating m-1"
+            className="btn text-white btn-floating m-10"
             style={{ backgroundColor: "#0082ca" }}
             href="https://www.linkedin.com/in/samuel-lee-891a70242/"
             target="_blank"
@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* <!-- Github --> */}
           <a
-            className="btn text-white btn-floating m-1"
+            className="btn text-white btn-floating m-10"
             style={{ backgroundColor: "#333333" }}
             href="https://github.com/samlee088"
             role="button"
