@@ -63,7 +63,7 @@ function ContactInformation() {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 3.0 }}
+      transition={{ duration: 2.0 }}
       className="flex relative flex-col text-center md:text-left xl:flex-col max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl">

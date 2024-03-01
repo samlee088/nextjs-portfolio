@@ -2,6 +2,7 @@
 import React from "react";
 import { ThemeToggler } from "./ThemeToggler";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -21,7 +22,9 @@ function Header() {
           duration: 1,
         }}
       >
-        <div className="text-white">Samuel Lee </div>
+        <Link href="#menu">
+          <div className="text-white">Samuel Lee </div>
+        </Link>
       </motion.div>
 
       <motion.div

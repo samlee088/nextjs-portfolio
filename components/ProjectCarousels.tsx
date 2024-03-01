@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 Autoplay.globalOptions = { delay: 8000 };
+import { motion } from "framer-motion";
 
 import bigBadBrainBusterImg from "./images/projectImages/big-bad-brain-blender-buster-screenshot.png";
 import newsAggregator from "./images/projectImages/newsAggregator.png";
@@ -74,7 +75,12 @@ function CarouselBanner() {
 
   return (
     <>
-      <div className=" h-screen flex flex-col overflow-hidden  relative cursor-pointer text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className=" h-screen flex flex-col overflow-hidden  relative cursor-pointer text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      >
         <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl">
           Projects
         </h3>
@@ -122,7 +128,7 @@ function CarouselBanner() {
           </Carousel>
         </div>
         <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
-      </div>
+      </motion.div>
     </>
   );
 }
