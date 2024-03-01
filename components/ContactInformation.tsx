@@ -13,7 +13,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
-
+import { motion } from "framer-motion";
 import * as z from "zod";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -60,7 +60,12 @@ function ContactInformation() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen relative">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 3.0 }}
+      className="flex relative flex-col text-center md:text-left xl:flex-col max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
+    >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl">
         Contact
       </h3>
@@ -117,7 +122,7 @@ function ContactInformation() {
         </form>
       </Form>
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 
