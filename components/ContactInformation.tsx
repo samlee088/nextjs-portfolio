@@ -121,6 +121,9 @@ function ContactInformation() {
           <Button type="submit">Submit</Button>
         </form>
       </Form>
+      <footer className="sticky bottom-5 w-full cursor-pointer flex justify-center ">
+        <Footer />
+      </footer>
     </motion.div>
   );
 }

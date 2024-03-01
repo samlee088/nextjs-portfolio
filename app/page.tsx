@@ -34,9 +34,9 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <footer className="sticky bottom-5 w-full cursor-pointer">
+      {/* <footer className="sticky bottom-5 w-full cursor-pointer">
         <Footer />
-      </footer>
+      </footer> */}
     </main>
   );
 }

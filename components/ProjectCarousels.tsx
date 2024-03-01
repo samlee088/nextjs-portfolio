@@ -106,8 +106,9 @@ function CarouselBanner() {
                         key={project.title}
                         src={project.picture}
                         alt=""
-                        width={1080}
-                        height={1080}
+                        // width={1080}
+                        // height={1080}
+                        className="w-[80vh]"
                       />
 
                       <div className="space-y-10 px-0 md:px-10 max-w-6xl ">
