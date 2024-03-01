@@ -6,7 +6,7 @@ import PixelDisplay from "./PixelDisplay";
 
 function Introduction() {
   return (
-    <div>
+    <div className="h-screen">
       <Image src={fullSeattle} alt="landscape picture of Seattle" />
       <PixelDisplay displayText="Please Scroll Down" />
       <PixelDisplay displayText="&#8659;" />

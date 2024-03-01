@@ -1,13 +1,25 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function ResumeSkills() {
   return (
-    <div>
-      <div className="animate-rotate-x">
-        <div className="d-flex text-center justify-content-center">
-          <p style={{ fontSize: "50px", marginTop: "50px" }}>Front End</p>
-        </div>
-        <ul className="list-unstyled flex flex-row pr-3  justify-content-center justify-evenly flex-wrap">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 3.0 }}
+      className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
+    >
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl">
+        Skills
+      </h3>
+
+      
+      <div className=" flex flex-col justify-center items-center text-center mr-[20vw]">
+        <h3 className=" text-center uppercase tracking-[20px] text-2xl">
+          Front End
+        </h3>
+        <ul className="justify-content-center flex-wrap grid grid-cols-3 gap-20">
           <li className=" flex flex-col justify-content-center text-center ">
             <p>HTML5</p>
             <i
@@ -69,11 +81,12 @@ export default function ResumeSkills() {
             ></i>
           </li>
         </ul>
-
-        <div className="d-flex  text-center justify-content-center ">
-          <p style={{ fontSize: "50px", marginTop: "75px" }}>Back End</p>
-        </div>
-        <ul className="list-unstyled  flex flex-row pr-3 justify-evenly flex-wrap">
+      </div>
+      <div className=" flex flex-col justify-center items-center text-center ">
+        <h3 className=" text-center uppercase tracking-[20px] text-2xl">
+          Back End
+        </h3>
+        <ul className="justify-content-center flex-wrap grid grid-cols-3 gap-20">
           <li className=" flex flex-col justify-content-center text-center ">
             <p>Node.js</p>
             <i
@@ -139,6 +152,6 @@ export default function ResumeSkills() {
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }

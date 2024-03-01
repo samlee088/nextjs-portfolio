@@ -21,7 +21,7 @@ function Header() {
           duration: 1,
         }}
       >
-        <div className="text-white">Samuel Lee</div>
+        <div className="text-white">Samuel Lee </div>
       </motion.div>
 
       <motion.div

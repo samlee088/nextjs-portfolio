@@ -8,24 +8,32 @@ import Menu from "@/components/Menu";
 export default function Home() {
   return (
     <main className="h-screen snap-y snap-mandatory overflow-scroll z-0">
-      <section id="introduction" className="mt-20 snap-center">
-        <Introduction />
-      </section>
-      <section id="menu" className="mt-20 snap-center">
+      {/* Introduction Menu */}
+      <section id="menu" className=" snap-center">
         <Menu />
       </section>
-      <section className="mt-40 mb-100 snap-center">
+
+      {/* Introduction Section */}
+      <section id="introduction" className="snap-center">
+        <Introduction />
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className=" snap-start">
         <ResumeSkills />
       </section>
-      <section className="mt-40 snap-center">
+
+      {/* Project Carousel */}
+      <section id="projects" className=" snap-center">
         <ProjectCarousels />
       </section>
-      <section className="mt-20 mb-40 snap-center">
+
+      {/* Contact Information */}
+      <section id="contact" className=" snap-start">
         <ContactInformation />
       </section>
-      <section className="mt-20 snap-center">
-        <Footer />
-      </section>
+      {/* <section className="snap-center">
+      </section> */}
     </main>
   );
 }
