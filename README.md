@@ -10,7 +10,7 @@ This project can be downloaded from Github:
 https://github.com/samlee088/nextjs-portfolio
 
 Additionally a deployed link can be found here:
-https://nextjs-portfolio-jrd9dbg48-samlee088.vercel.app/
+https://bit.ly/samuel_lee_coding_portfolio
 
 ## Usage
 
